@@ -15,10 +15,12 @@ import { ChevronLeft, ChevronRight } from "lucide-react";
 export default function Swiper01() {
   // 🔹 Image array (replace with your own images / static imports)
   const images = [
-    "https://picsum.photos/id/1018/1000/600/",
-    "https://picsum.photos/id/1015/1000/600/",
-    "https://picsum.photos/id/1019/1000/600/",
-    "https://picsum.photos/id/1020/1000/600/",
+    "https://wallpapers.com/images/high/mr-incredible-poster-vofcgubbroz29up9.webp",
+    "https://wallpapers.com/images/high/mr-incredible-pixar-the-incredibles-movie-by1j1ocdvuub7okq.webp",
+    "https://wallpapers.com/images/high/mr-incredible-lego-2tguy9hjxqqjyx2v.webp",
+    "https://wallpapers.com/images/high/awesome-mr-incredible-and-family-6fsrf7chf8ekwujp.webp",
+    "https://wallpapers.com/images/high/awe-inspiring-sunset-over-the-mountains-o4652bzxnej3886j.webp",
+    "https://wallpapers.com/images/high/mr-incredible-and-violet-ug3s98475c1td35v.webp",
   ];
 
   return (
@@ -51,7 +53,7 @@ export default function Swiper01() {
             <Image
               src={src}
               alt={`Slide ${index + 1}`}
-              className="w-full h-64 object-cover"
+              className="w-full h-150 object-cover"
               width={100}
               height={100}
             />
