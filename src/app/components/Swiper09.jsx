@@ -1,16 +1,19 @@
 "use client";
 import Image from 'next/image';
 
-import React, { useRef, useState } from "react";
 // Import Swiper React components
 import { Swiper, SwiperSlide } from "swiper/react";
 
 // Import Swiper styles
-import "swiper/css";
+import 'swiper/css';
+import 'swiper/css/pagination';
 
 // import "./styles.css";
 
-export default function Swiper03() {
+// import required modules
+import { Mousewheel, Pagination } from 'swiper/modules';
+
+export default function Swiper09() {
 
   const images = [
     "https://wallpapers.com/images/high/mr-incredible-poster-vofcgubbroz29up9.webp",
@@ -23,14 +26,17 @@ export default function Swiper03() {
 
   return (
     <>
-      <Swiper className=" w=[80%] mx-auto rounded-2xl"
-            spaceBetween = {50}
-            slidesPerView = {1}
-            navigation = {true}
-            pagination = {{ clickable : true }}
-            scrollbar = {{ dragable : true }}
-            loop = {true}
-            >
+      <Swiper
+        direction={'vertical'}
+        slidesPerView={1}
+        spaceBetween={30}
+        mousewheel={true}
+        pagination={{
+          clickable: true,
+        }}
+        modules={[Mousewheel, Pagination]}
+        className="mySwiper"
+      >
         {/* 🔹 Map images into SwiperSlide */}
                 {images.map((src, index) => (
                   <SwiperSlide key={index}>

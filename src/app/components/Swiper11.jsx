@@ -6,15 +6,16 @@ import { Swiper, SwiperSlide } from "swiper/react";
 
 // Import Swiper styles
 import 'swiper/css';
-import 'swiper/css/effect-coverflow';
+import 'swiper/css/effect-flip';
 import 'swiper/css/pagination';
+import 'swiper/css/navigation';
 
 // import "./styles.css";
 
 // import required modules
-import { EffectCoverflow, Pagination } from 'swiper/modules';
+import { EffectFlip, Pagination, Navigation } from 'swiper/modules';
 
-export default function Swiper05() {
+export default function Swiper11() {
 
   const images = [
     "https://lh3.googleusercontent.com/proxy/x9wtel74CGndj7gdiClR8mYlTgGzUFoDDRDVvgGpAu_jcRbnwF28ltc2HTsG4_72xP5rNGz723QV9hD9smYaR5JOj8UEHRwtL6jKRYfwtayzuVxtFgk",
@@ -34,19 +35,11 @@ export default function Swiper05() {
   return (
     <>
       <Swiper
-        effect={'coverflow'}
+        effect={'flip'}
         grabCursor={true}
-        centeredSlides={true}
-        slidesPerView={'auto'}
-        coverflowEffect={{
-          rotate: 50,
-          stretch: 0,
-          depth: 100,
-          modifier: 1,
-          slideShadows: true,
-        }}
         pagination={true}
-        modules={[EffectCoverflow, Pagination]}
+        navigation={true}
+        modules={[EffectFlip, Pagination, Navigation]}
         className="mySwiper"
       >
         {/* 🔹 Map images into SwiperSlide */}
@@ -55,9 +48,9 @@ export default function Swiper05() {
                     <Image
                       src={src}
                       alt={`Slide ${index + 1}`}
-                      className="w-150 h-150 object-cover rounded-2xl"
-                      width={200}
-                      height={2000}
+                      className="rounded-2xl"
+                      width={750}
+                      height={10}
                     />
                   </SwiperSlide>
                 ))}

@@ -46,7 +46,7 @@ export default function Swiper04() {
                     <Image
                       src={src}
                       alt={`Slide ${index + 1}`}
-                      className="w-full h-150 object-cover"
+                      className="w-full h-150 object-cover rounded-2xl"
                       width={200}
                       height={2000}
                     />

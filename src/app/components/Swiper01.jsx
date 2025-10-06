@@ -45,7 +45,7 @@ export default function Swiper01() {
         speed={800}
         centeredSlides={true}
         grabCursor={true}
-        className="rounded-lg overflow-hidden"
+        className="rounded-2xl overflow-hidden "
       >
         {/* 🔹 Map images into SwiperSlide */}
         {images.map((src, index) => (
